@@ -18,7 +18,7 @@ public class Main {
         for (int i=2;i<=(n/2);i++){
             if(n % i == 0) {
                 factors +=1;
-                System.out.println("factors are : "+i); // printing the prime factors
+                System.out.println(i + " is factor"); // printing the prime factors
             }
         }
         if (factors > 0) System.out.println("is not prime");
@@ -28,15 +28,22 @@ public class Main {
         int revNum=0;
         int originalNum = n;
         while(n>0){
-            revNum = revNum * 10 +n %10;
+            revNum = revNum * 10 + n%10;
             n=n/10;
         }
         return originalNum == revNum ? originalNum+" is palindrome" : originalNum+"not palindrome";
     }
+    public static boolean isStringPalindrome(String str){
+        int len=str.length();
+        for (int i=0;i<len/2;i++){
+            if(str.charAt(i) != str.charAt(len-i-1)) return false; // if not palindrome returns false.
+        }
+        return true;
+    }
     // armstrong number ex: 153 = 1^3+ 5^3 + 3^3 or 1634= (1+6+3+4)^3
     public static boolean Armstrong(int n){
         double sum=0, givenNUm=n; int len = (int) Math.log10(n)+1;
-        System.out.println(len);
+//        System.out.println(len);
         while(n!=0){
             sum=sum+Math.pow((n%10), len);
             n/=10;
@@ -47,10 +54,17 @@ public class Main {
     // main method strats here
     public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number :");
-        int num = sc.nextInt();
+//        System.out.println("Enter a number :");
+//        int num = sc.nextInt();
+
 //        System.out.println(isPalindromeNum(num));
-        System.out.println(Armstrong(num));
+//        System.out.println(Armstrong(num));
+//        isPrime(num);
+
+        System.out.print("Enter a string to palindrome : ");
+        String str =sc.nextLine();
+        System.out.println(isStringPalindrome(str));
+        sc.close();
     }
 }
 
