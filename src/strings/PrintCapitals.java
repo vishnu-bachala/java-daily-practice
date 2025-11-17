@@ -24,13 +24,28 @@ public class PrintCapitals {
         } return t.toString();
     }
 
+    public static int vowels(String s){
+        int count=0;
+        s=s.toLowerCase();
+        for (int i=0; i<s.length(); i++){
+            char ch=s.charAt(i);
+            if (ch=='a' | ch=='e' | ch=='i' | ch=='o' | ch=='u'){
+               count +=1;
+            }
+        }
+        return  count;
+    }
+
 
 
     public static void main( String [] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter String : ");
         String str=sc.nextLine();
+
+        // method calling
         System.out.println("All upperCase : "+printCapitals(str));
         System.out.println("All lowercase : "+printLower(str));
+        System.out.println("Count of Vowels :"+ vowels(str));
     }
 }
