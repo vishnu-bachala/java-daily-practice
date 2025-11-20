@@ -29,7 +29,8 @@ public class PrintCapitals {
         s=s.toLowerCase();
         for (int i=0; i<s.length(); i++){
             char ch=s.charAt(i);
-            if (ch=='a' | ch=='e' | ch=='i' | ch=='o' | ch=='u'){
+            System.out.println("index of "+ch+" => "+"aeiou".indexOf(ch));
+            if ("aeiou".indexOf(ch) != -1){
                count +=1;
             }
         }
@@ -45,7 +46,9 @@ public class PrintCapitals {
 
         // method calling
         System.out.println("All upperCase : "+printCapitals(str));
+        System.out.println("<===============>");
         System.out.println("All lowercase : "+printLower(str));
+        System.out.println("<===============>");
         System.out.println("Count of Vowels :"+ vowels(str));
     }
 }
