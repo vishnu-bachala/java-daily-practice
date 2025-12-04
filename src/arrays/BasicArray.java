@@ -77,7 +77,7 @@ public class BasicArray {
         int max= largest(ar);
 
         System.out.println("highest_sum is " + (sum-min));
-        System.out.println("highest_sum is " + (sum-max));
+        System.out.println("Lowest_sum is " + (sum-max));
     }
 
     // PRODUCT OF N-1 ELEMENTS IN ARRAY
