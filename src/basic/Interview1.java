@@ -28,6 +28,6 @@ public class Interview1 {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
 
-        bin(n);
+        binaryNumbers(n);
     }
 }

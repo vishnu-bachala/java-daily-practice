@@ -3,6 +3,7 @@ package basic;
 import java.util.Scanner;
 
 public class Leap_Year {
+    // leap year
     public static void isLeap(int year){
         if((year % 4 ==0 && year%100 !=0 ) || (year%400==0))
              System.out.println(year+" leap year");
